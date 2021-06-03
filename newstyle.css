@@ -1,0 +1,117 @@
+.container {
+  width: auto;
+  max-width: 920px;
+  border: 0;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 170px;
+  margin-left: 260px;
+  margin-bottom: 129px;
+  margin-right: 260px;
+  box-sizing: border-box;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+}
+
+.card {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  padding: 44px;
+  display: flex;
+  flex-direction: column;
+}
+.card.card-orange {
+  background-color: #e38826;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.card.card-dark-cyan {
+  background-color: #006970;
+  border-radius: 0;
+}
+.card.card-very-dark-cyan {
+  background-color: #004241;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card .title {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 27px;
+  text-align: left;
+  color: #f2f2f2;
+}
+.card p {
+  text-align: left;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+}
+.card .image-wrapper {
+  text-align: left;
+}
+.card .cta {
+  position: relative;
+  margin-bottom: 0;
+  margin-top: auto;
+  padding-bottom: 0;
+}
+.card .button-cta {
+  border-radius: 25px;
+  width: 140px;
+  padding: 15px;
+  background-color: #f2f2f2;
+  border: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  cursor: pointer;
+  font-size: 15px;
+}
+.card .button-cta:hover {
+  border: 2px solid #f2f2f2;
+}
+.card .button-cta.button-orange {
+  color: #e38826;
+  border: none;
+}
+.card .button-cta.button-orange:hover, .card .button-cta.button-orange :active {
+  background-color: #e38826;
+  color: rgba(255, 255, 255, 0.75);
+}
+.card .button-cta.button-dark-cyan {
+  color: #006970;
+  border: none;
+}
+.card .button-cta.button-dark-cyan:hover, .card .button-cta.button-dark-cyan :active {
+  background-color: #006970;
+  color: rgba(255, 255, 255, 0.75);
+}
+.card .button-cta.button-very-dark-cyan {
+  color: #004241;
+  border: none;
+}
+.card .button-cta.button-very-dark-cyan:hover, .card .button-cta.button-very-dark-cyan :active {
+  background-color: #004241;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.color-orange {
+  color: #e38826;
+}
+
+.color-dark-cyan {
+  color: #006970;
+}
+
+.color-very-dark-cyan {
+  color: #004241;
+}
+
+/*# sourceMappingURL=newstyle.css.map */

@@ -1,0 +1,154 @@
+$color-orange: hsl(31, 77%, 52%);
+$color-dark-cyan: hsl(184, 100%, 22%);
+$color-very-dark-cyan: hsl(179, 100%, 13%);
+$normal-font: 15px;
+$font-lexend: 'Lexend Deca', sans-serif;
+$font-big: 'Big Shoulders Display', cursive;
+
+@mixin theme-orange{
+    background-color: $color-orange;
+    color:hsla(0, 0%, 100%, 0.75);
+}
+
+@mixin theme-dark-cyan{
+    background-color: $color-dark-cyan;
+    color:hsla(0, 0%, 100%, 0.75);
+}
+
+@mixin theme-very-dark-cyan{
+    background-color: $color-very-dark-cyan;
+    color:hsla(0, 0%, 100%, 0.75);
+}
+
+.container {
+    width: auto;
+    max-width: 920px;
+    border: 0;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 170px;
+    margin-left: 260px;
+    margin-bottom: 129px;
+    margin-right: 260px;
+    box-sizing: border-box;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+}
+
+.card{
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    padding: 44px;
+    display: flex;
+    flex-direction: column;
+
+    &.card-orange{
+        background-color: $color-orange;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    &.card-dark-cyan {
+        background-color:$color-dark-cyan;
+        border-radius: 0;
+    }
+    
+    &.card-very-dark-cyan {
+        background-color:$color-very-dark-cyan;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .title {
+        font-family: 'Big Shoulders Display', cursive;
+        font-size: 27px;
+        text-align: left;
+        color: hsl(0, 0%, 95%);
+    }
+    
+    p{
+        text-align:left;
+        color: hsla(0, 0%, 100%, 0.75);
+        font-size: 15px;
+        font-family: 'Lexend Deca', sans-serif;
+        
+    }
+    
+    .image-wrapper {
+        text-align: left;
+    }
+    
+    .cta {
+        position: relative;
+        margin-bottom: 0;
+        margin-top: auto;
+        padding-bottom: 0;
+    }
+    
+    .button-cta {
+        border-radius: 25px;
+        width: 140px;
+        padding: 15px;
+        background-color: hsl(0, 0%, 95%);
+        border: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+        cursor: pointer;
+        font-size: 15px;
+    
+        &:hover{
+        border: 2px solid hsl(0, 0%, 95%);
+        }
+    
+        &.button-orange {
+            color:$color-orange;
+            border: none;
+      
+            &:hover, :active {
+                @include theme-orange;         
+            }
+        }
+    
+        &.button-dark-cyan {
+            color:$color-dark-cyan;
+            border: none;
+      
+            &:hover, :active {
+                @include theme-dark-cyan;         
+            }
+        }
+    
+        &.button-very-dark-cyan {
+            color:$color-very-dark-cyan;
+            border: none;
+      
+            &:hover, :active {
+                @include theme-very-dark-cyan;         
+            }
+        }
+    }
+}
+
+
+
+ .color-orange{
+     color:$color-orange;
+ }
+ 
+ .color-dark-cyan{
+     color: $color-dark-cyan;
+ }
+ 
+ .color-very-dark-cyan{
+     color: $color-very-dark-cyan;
+ }
+ 
+ 
