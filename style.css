@@ -1,173 +1,171 @@
+:root{
+--color-orange: hsl(31, 77%, 52%);
+--color-dark-cyan: hsl(184, 100%, 22%);
+--color-very-dark-cyan: hsl(179, 100%, 13%);
+--color-white: hsla(0, 0%, 100%, 0.75);
+--color-light-gray: hsl(0, 0%, 95%);
+font-size: 15px;
+margin: 2rem;
+}
 
 * {
     box-sizing: border-box;
 }
+
+  body{
+    display: grid;
+    place-items: center;
+    padding: 1.5rem;
+  }
+
 .container {
-    width: auto;
-    max-width: 920px;
-    text-align: center;
-    border-radius: 10px;
-    margin-top: 170px;
-    margin-left: 260px;
-    margin-bottom: 129px;
-    margin-right: 260px;
-    max-height: 500px;
+    border-radius: .8rem;
+    width: 50rem;
+    height: 30rem;
 }
 
 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
+    align-items: stretch;
     width: 100%;
+    height: 100%;
+    margin: auto;
 }
 
 .card{
-    position: relative;
-    width: 100%;
-    height: 500px;
-    padding: 44px;
     display: flex;
     flex-direction: column;
     text-align: left;
-    max-height: 500px;
+    padding: 2.5rem;
+    height: 100%;
 }
 
 .card-orange {
-    background-color: hsl(31, 77%, 52%);
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
+    background-color: var(--color-orange);
+    border-bottom-left-radius: 0.8rem;
+    border-top-left-radius: 0.8rem;
 }
-
-.card-orange button:hover, button:active{
-    color: hsl(0, 0%, 95%);
-    border: 2px solid hsl(0, 0%, 95%);
-    background: hsl(31, 77%, 52%);
-    cursor: pointer;
-}
-
 
 .card-dark-cyan {
-    background-color:hsl(184, 100%, 22%);
+    background-color: var(--color-dark-cyan);
     border-radius: 0;
 }
 
-.card-dark-cyan button:hover{
-    color: hsl(0, 0%, 95%);
-    border: 2px solid hsl(0, 0%, 95%);
-    background: hsl(184, 100%, 22%);
-    cursor: pointer;
-}
-
 .card-very-dark-cyan {
-    background-color:hsl(179, 100%, 13%);
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.card-very-dark-cyan button:hover{
-    color: hsl(0, 0%, 95%);
-    border: 2px solid hsl(0, 0%, 95%);
-    background: hsl(179, 100%, 13%);
-    cursor: pointer;
+    background-color: var(--color-very-dark-cyan);
+    border-bottom-right-radius: .8rem;
+    border-top-right-radius: .8rem;
 }
 
 h1 {
     font-family: 'Big Shoulders Display', sans-serif;
     text-transform: uppercase;
-    font-size: 2.5vmax;
-    color: hsl(0, 0%, 95%);
-    margin: 0;  
-    padding: 0;
-  }
-
-  .card-content{
-    margin: 0;  
-    padding: 0;
+    font-size: 2.5rem;
+    color: var(--color-light-gray);
+    text-align: left;
   }
 
   p {
     font-family: 'Lexend Deca', sans-serif;
-    color: hsla(0, 0%, 100%, 0.75);
-    line-height: 25px;
-    font-size: 1vmax;
+    color: var(--color-white);
+    font-size: 0.8rem;
   }
 
-.image-wrapper {
-    text-align: left;
-}
-
-.cta {
-    position: relative;
-    margin-bottom: 0;
-    margin-top: auto;
-    padding-top: 0;
-    padding-bottom: 0;
-}
+  .cta {
+    margin-top: auto;   
+}  
 
 button {  
-    border-radius: 25px;
-    width: 140px;
-    padding: 15px;
-    background-color: hsl(0, 0%, 95%);
+    border-radius: 1.5rem;
+    width: 8.75rem;
+    padding: 1.0rem;
+    background-color:var(--color-light-gray);
     border: 0;
-    margin-bottom: 0;
-    margin-top: 0;
-    font-size: 15px;
+}
+
+.card-orange button{
+    color:var(--color-orange);
+}
+
+.card-dark-cyan button{
+    color:var(--color-dark-cyan);
+}
+
+.card-very-dark-cyan button{
+    color:var(--color-very-dark-cyan);
+}
+
+.card-orange button:hover, button:active{
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    background: var(--color-orange);
+    cursor: pointer;
+}
+
+.card-dark-cyan button:hover, button:active{
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    background: var(--color-dark-cyan);
+    cursor: pointer;
+}
+
+.card-very-dark-cyan button:hover, button:active{
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    background: var(--color-very-dark-cyan);
+    cursor: pointer;
 }
 
 @media (max-width: 375px){
+
+    body{
+        display: grid;
+        place-items: center;
+      }
+
     .container {
         width: auto;
-        max-width: 920px;
-        border: solid black 1px;
+        max-width: 57rem;
         text-align: center;
-        margin: 85px 20px 129px 20px;
     }
 
     .cards {
         display: grid;
         grid-template-columns: 1fr;
-        align-items: left;
-        width: 100%;
+        align-items: stretch;
     }
 
     .card{
-        position: relative;
-        width: 100%;
-        height: 440px;
-        padding: 44px;
         display: flex;
         flex-direction: column;
+        text-align: left;
+        padding: 2.5rem;
     }
-
     .card-orange {
-        background-color: hsl(31, 77%, 52%);
-    
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        border-bottom-left-radius: 0;
+        background-color: var(--color-orange);
+        border-top-right-radius: 0.8rem;
+        border-top-left-radius: 0.8rem;
         border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
     }
     
     .card-dark-cyan {
-        background-color:hsl(184, 100%, 22%);
+        background-color: var(--color-dark-cyan);
         border-radius: 0;
     }
     
     .card-very-dark-cyan {
-        background-color:hsl(179, 100%, 13%);
-        border-top-left-radius: 0;
+        background-color: var(--color-very-dark-cyan);
+        border-bottom-right-radius: .8rem;
+        border-bottom-left-radius: .8rem;
         border-top-right-radius: 0;
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px;
+        border-top-left-radius: 0;
     }
-
-    footer{
-        margin-bottom: 0;
-      position: fixed;
-    }
-
 }
+
+
+
 
 
 
